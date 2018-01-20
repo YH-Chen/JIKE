@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/backHome"
+        app:showAsAction="always"
+        android:title="返回" />
+
+    <item
+        android:id="@+id/addTask"
+        app:showAsAction="never"
+        android:title="添加任务" />
+
+    <item
+        android:id="@+id/modify_course"
+        app:showAsAction="never"
+        android:title="修改信息" />
+
+    <item
+        android:id="@+id/delete_course"
+        app:showAsAction="never"
+        android:title="删除课程" />
+</menu>

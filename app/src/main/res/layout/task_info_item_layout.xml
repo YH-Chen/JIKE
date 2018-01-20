@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="12dp">
+    <RelativeLayout
+        android:id="@+id/taskDetail_that_outer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:visibility="gone">
+        <ImageView
+            android:id="@+id/taskDetail_avatar1"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginEnd="8dp"
+            android:layout_alignParentTop="true"
+            android:src="@mipmap/xiaokeai"/>
+        <TextView
+            android:id="@+id/taskDetail_taskInfo_pusher1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发布者"
+            android:textSize="12sp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginStart="2dp"
+            android:layout_toEndOf="@id/taskDetail_avatar1" />
+        <TextView
+            android:id="@+id/taskDetail_taskInfo_content1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="内容"
+            android:lineSpacingMultiplier="1.2"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:maxWidth="260dp"
+            android:textSize="18sp"
+            android:background="@drawable/task_detail_that_info"
+            android:layout_below="@id/taskDetail_taskInfo_pusher1"
+            android:layout_toEndOf="@id/taskDetail_avatar1"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/taskDetail_this_outer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:visibility="visible">
+        <TextView
+            android:id="@+id/taskDetail_taskInfo_pusher2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发布者"
+            android:textSize="12sp"
+            android:layout_toStartOf="@id/taskDetail_avatar2"
+            android:layout_marginBottom="2dp"
+            android:layout_marginEnd="2dp"/>
+
+        <TextView
+            android:id="@+id/taskDetail_taskInfo_content2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/taskDetail_taskInfo_pusher2"
+            android:layout_toStartOf="@id/taskDetail_avatar2"
+            android:background="@drawable/task_detail_this_info"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:maxWidth="260dp"
+            android:lineSpacingMultiplier="1.2"
+            android:text="内容 "
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/taskDetail_avatar2"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="8dp"
+            android:layout_alignParentEnd="true"
+            android:src="@mipmap/xiaokeai"/>
+    </RelativeLayout>
+
+</LinearLayout>

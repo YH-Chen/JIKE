@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:padding="8dp"
+        android:background="#90ffffff">
+        <ImageView
+            android:id="@+id/headImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/xiaokeai"
+            android:contentDescription="@string/headimage"
+            android:padding="8dp"/>
+
+        <TextView
+            android:id="@+id/nickName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@id/headImage"
+            android:text="Danboard"
+            android:textSize="20sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/sName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nickName"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@id/headImage"
+            android:text="SID：C960609"
+            android:textSize="16sp"
+            android:textColor="@color/grey"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/settings"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingStart="20dp"
+        android:layout_marginTop="50dp"
+        android:background="#90ffffff"
+        android:text="设置"
+        android:drawableStart="@drawable/ic_settings"
+        android:drawablePadding="-280dp"
+        tools:ignore="RtlSymmetry" />
+    <Button
+        android:id="@+id/share"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingStart="20dp"
+        android:background="#90ffffff"
+        android:text="分享"
+        android:drawableStart="@drawable/ic_share"
+        android:drawablePadding="-280dp"
+        tools:ignore="RtlSymmetry" />
+
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingStart="20dp"
+        android:background="#90ffffff"
+        android:text="退出"
+        android:drawableStart="@drawable/ic_exit"
+        android:drawablePadding="-280dp"
+        tools:ignore="RtlSymmetry" />
+
+</LinearLayout>

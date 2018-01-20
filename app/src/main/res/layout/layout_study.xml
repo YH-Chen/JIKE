@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:id="@+id/AlbumImageView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/image"
+        android:layout_marginTop="32dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/RemainTimeTextView"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        app:layout_constraintTop_toTopOf="@id/AlbumImageView"
+        app:layout_constraintBottom_toBottomOf="@id/AlbumImageView"
+        app:layout_constraintLeft_toLeftOf="@id/AlbumImageView"
+        app:layout_constraintRight_toRightOf="@id/AlbumImageView"
+        android:text="25:00"
+        android:gravity="center"
+        android:textSize="50sp"
+        android:textColor="@color/grey"
+        />
+
+    <SeekBar
+        android:id="@+id/MusicSeekBar"
+        android:layout_width="250dp"
+        android:max="100"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/AlbumImageView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="100dp"/>
+
+    <TextView
+        android:id="@+id/CompleteTimeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="25:25"
+        android:textColor="@color/grey"
+        app:layout_constraintLeft_toRightOf="@id/MusicSeekBar"
+        app:layout_constraintTop_toTopOf="@id/MusicSeekBar"/>
+
+    <TextView
+        android:id="@+id/CurrentTimeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:textColor="@color/grey"
+        app:layout_constraintRight_toLeftOf="@id/MusicSeekBar"
+        app:layout_constraintTop_toTopOf="@id/MusicSeekBar"
+        />
+
+    <TextView
+        android:id="@+id/StudyTaskTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="常规学习"
+        android:textSize="26sp"
+        android:gravity="center"
+        android:textColor="#363636"
+        app:layout_constraintBottom_toTopOf="@id/StatusTextView"
+        app:layout_constraintTop_toBottomOf="@id/AlbumImageView"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/StatusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="准备开始"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:textColor="@color/grey"
+        app:layout_constraintBottom_toTopOf="@id/CurrentTimeTextView"
+        app:layout_constraintTop_toBottomOf="@id/StudyTaskTextView"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <Button
+        android:id="@+id/PlayButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="播放音乐"
+        android:tag="1"
+        app:layout_constraintTop_toBottomOf="@id/MusicSeekBar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintHorizontal_chainStyle="packed"/>
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

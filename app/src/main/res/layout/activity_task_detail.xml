@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.great.project.Activities.TaskDetail">
+
+    <com.example.great.project.View.TitleBar
+        android:id="@+id/taskDetail_titlebar"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/task_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/taskDetail_titlebar">
+        <LinearLayout
+            android:id="@+id/taskDetail_header"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="-20dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:text="简         介："
+                    android:textSize="16sp"
+                    android:layout_marginEnd="10dp"
+                    android:textColor="@color/white" />
+                <TextView
+                    android:id="@+id/taskDetail_brief"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="balbala"
+                    android:textSize="16sp"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp">
+                <TextView
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:text="截止日期："
+                    android:textSize="16sp"
+                    android:layout_marginEnd="10dp"
+                    android:textColor="@color/white" />
+                <TextView
+                    android:id="@+id/taskDetail_DDL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2000"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp">
+                <TextView
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:text="创   建  者："
+                    android:layout_marginEnd="10dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/white" />
+                <TextView
+                    android:id="@+id/taskDetail_creator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <com.example.great.project.Adapter.HorizontalListView
+                android:id="@+id/taskDetail_participants"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="10dp"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/task_arrow"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="-8dp"
+            android:background="@drawable/ic_keyboard_down"/>
+    </LinearLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/taskDetail_taskInfoList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/task_detail"
+        app:layout_constraintBottom_toTopOf="@id/chat_task"/>
+
+    <LinearLayout
+        android:id="@+id/chat_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <EditText
+            android:id="@+id/taskDetail_editor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="12"
+            app:layout_constraintTop_toBottomOf="@id/taskDetail_taskInfoList"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/taskDetail_sendBtn"
+            app:layout_constraintHorizontal_chainStyle="packed"/>
+        <Button
+            android:id="@+id/taskDetail_sendBtn"
+            android:layout_width="60dp"
+            android:layout_height="38dp"
+            android:text="发送"
+            android:textColor="@color/white"
+            android:background="@drawable/button_selector"
+            android:layout_marginStart="10dp"
+            app:layout_constraintLeft_toRightOf="@id/taskDetail_editor"
+            app:layout_constraintTop_toTopOf="@id/taskDetail_editor"
+            app:layout_constraintBottom_toBottomOf="@id/taskDetail_editor"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

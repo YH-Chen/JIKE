@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_classes"
+        android:icon="@drawable/ic_home"
+        android:title="课程" />
+
+    <item
+        android:id="@+id/navigation_ddl"
+        android:icon="@drawable/ic_task"
+        android:title="任务" />
+
+    <item
+        android:id="@+id/navigation_learn"
+        android:icon="@drawable/ic_alarm"
+        android:title="学习" />
+
+    <item
+        android:id="@+id/navigation_settings"
+        android:icon="@drawable/ic_me"
+        android:title="我的" />
+
+</menu>
